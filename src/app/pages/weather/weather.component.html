@@ -1,0 +1,14 @@
+<div class="">
+    <form action="">
+        <input type="text" placeholder="City Name" name="city name" [(ngModel)]="city">
+        <button type="submit" (click)="fetchWeather()">Submit</button>
+    </form>
+</div>
+
+<div class="" *ngIf="weatherData">
+    <h2>{{weatherData.name}}</h2>
+    <p>{{weatherData.weather[0].description}}</p>
+    <p>Temperature: {{weatherData.main.temp}}</p>
+    <p>Humidity: {{weatherData.main.humidity}}</p>
+    <p>Wind Speed: {{weatherData.wind.speed}}</p>
+</div>
